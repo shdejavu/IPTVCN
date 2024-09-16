@@ -71,8 +71,9 @@ def process_m3u(content):
     i = 0
     while i < len(lines):
         line = lines[i]
-        # Check if it's an #EXTINF line, and the next line is the URL
-        if line.startswith('#EXTINF') and (i + 1) < len(lines):
+        try:
+          # Check if it's an #EXTINF line, and the next line is the URL
+          if line.startswith('#EXTINF') and (i + 1) < len(lines):
             extinf_line = line  # Store the #EXTINF line
             url_line = lines[i + 1]  # Store the URL line
             if url_line.startswith('http'):
@@ -83,11 +84,15 @@ def process_m3u(content):
                 else:
                     print(f"Removing slow URL: {url_line}")
             i += 2  # Skip to the next pair (#EXTINF and URL)
-        else:
+          else:
             # Add non-#EXTINF lines (if there are any) such as comments
             valid_lines.append(line)
             i += 1
-    
+
+        except Exception as e:
+            i+=1
+            continue
+            
     return "\n".join(valid_lines)
 
 def process_multiple_m3u(url_list):
