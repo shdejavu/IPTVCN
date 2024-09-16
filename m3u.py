@@ -90,7 +90,7 @@ def process_m3u(content):
             i += 1
 
         except Exception as e:
-            i+=1
+            i+=2
             continue
             
     return "\n".join(valid_lines)
