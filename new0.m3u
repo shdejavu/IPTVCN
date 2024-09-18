@@ -117,6 +117,8 @@ http://111.196.131.18:8686/rtp/239.3.1.105:8092$LR•IPV4『线路751』
 http://120.237.241.82:4000/udp/239.253.43.121:5146$LR•IPV4『线路761』
 #EXTINF:-1 tvg-id="90" tvg-name="CCTV5" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV5.png" group-title="央视频道",CCTV5
 http://123.113.237.36:8012/rtp/239.3.1.173:8001$LR•IPV4『线路90』
+#EXTINF:-1 tvg-id="112" tvg-name="CCTV5" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV5.png" group-title="央视频道",CCTV5
+https://livednow.com/migu/641886683?sign=gAAAAABmwyZNbpWR9rKAXADmFFVuCxeXeK3OcDgHZDAymqEsRp1O2zVhLRIb9IVoi5wieFV6lEs--KhTE0RCG-Y4trxKcXfKeldcyZgt_cdgdlQlHdz4CkMDVXzA6MqvsbkFIgRJfLYlo4adW3NPXhdnFG1h-lfcjxeZGItFXlJqxHyWVctJez8AirKkc4GWyo-FFP7YEpCTcXdIyoVNoszyUK-zc2kALA%3D%3D$LR•IPV4『线路112』
 #EXTINF:-1 tvg-id="446" tvg-name="CCTV5" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV5.png" group-title="央视频道",CCTV5
 http://222.134.245.16:9901/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路446』
 #EXTINF:-1 tvg-id="524" tvg-name="CCTV5" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV5.png" group-title="央视频道",CCTV5
@@ -169,10 +171,14 @@ https://livednow.com/migu/673168140?sign=gAAAAABmwyZNj_a4C2VUN5iPhGbNIAY_tghoh5w
 https://livednow.com/migu/624878405?sign=gAAAAABmwyZNbsdGV2Hg2aFiXHhByIsnK8poAharyQ3Iw80Jf6bqi4_7fYYF0nt-iXyrKtYnDmLHgQ4HWqkewuJRTZRd5uOrQNJc-yOxS3c6hVAAjsn47gegbncX8Xg46-ze_yzz1P5jvCKUOgHOufkcNajOpIsuceP8oTdMrS7eHTF7lPhLPgOlb4TfbO5FskHbcpb7ZHAcg5nxWSXCCSMwRhnbmKGt5w%3D%3D$LR•IPV4『线路71』
 #EXTINF:-1 tvg-id="41" tvg-name="CCTV11" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV11.png" group-title="央视频道",CCTV11
 http://123.113.237.36:8012/rtp/239.3.1.152:8120$LR•IPV4『线路41』
+#EXTINF:-1 tvg-id="56" tvg-name="CCTV11" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV11.png" group-title="央视频道",CCTV11
+https://livednow.com/migu/667987558?sign=gAAAAABmwyZN08k3KBcFc4gGSSLD_p1XS1S8QmTOyNT_hhjNOs6j8OaUlWFIKLb2trcb_orn9_mjYLfTPVvyIyg1v0Kk87ZS8VfgAkRDAq2KcWT75k_srtLDo93Dy1lPJcUUmxXzy1FqWM93F4YtuIcDGVi3eWQkg-tC2D8eNckX_4qsLnbAlFYHe1qRojG11jXhxGhqr8y5OzRSSv600Uh6mGo6Fvmm2w%3D%3D$LR•IPV4『线路56』
 #EXTINF:-1 tvg-id="287" tvg-name="CCTV11" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV11.png" group-title="央视频道",CCTV11
 http://120.6.7.194:4022/udp/239.253.93.153:6321$LR•IPV4『线路287』
 #EXTINF:-1 tvg-id="62" tvg-name="CCTV12" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV12.png" group-title="央视频道",CCTV12
 http://123.113.237.36:8012/rtp/239.3.1.64:8124$LR•IPV4『线路62』
+#EXTINF:-1 tvg-id="79" tvg-name="CCTV12" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV12.png" group-title="央视频道",CCTV12
+https://livednow.com/migu/673168185?sign=gAAAAABmwyZN6CYtwqu4DfGXkrCxsZv1KQXVQPNDe_Rjq39PjSmGaXJd4XWw35K3nmB_Gug1sKOWQc4_lEjm-DxFG6kZtxlOP3Oa_adQmWuV0v-S5zmp-bklaTBPvKe2qFosowqLLJXgKfkIgssZ7raKRGiQVSmktjn4ZC0JM35M_zWGZZ9ZDBBQ-VRVVsCe3TGyGYJkbUP0UbU92dEpuMqNJ4VudRBHWw%3D%3D$LR•IPV4『线路79』
 #EXTINF:-1 tvg-id="151" tvg-name="CCTV12" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV12.png" group-title="央视频道",CCTV12
 http://219.159.147.195:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4『线路151』
 #EXTINF:-1 tvg-id="50" tvg-name="CCTV13" tvg-logo="https://gitee.com/yuanzl77/TVBox-logo/raw/main/png/CCTV13.png" group-title="央视频道",CCTV13
