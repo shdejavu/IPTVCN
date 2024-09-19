@@ -47,7 +47,7 @@ def is_url_speed_acceptable(url):
     #test_duration=10
     try:
         # Make a GET request and fetch a small chunk of the file
-        response = requests.get(url, stream=True, timeout=5)
+        response = requests.get(url, stream=True, timeout=15)
         
         # If the request is not successful, return False
         if response.status_code != 200:
