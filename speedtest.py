@@ -15,6 +15,13 @@ def is_url_ipv6(url):
     # Check if the URL contains an IPv6 address by looking for square brackets
     return bool(re.search(r'\[.*?\]', url))
     
+# Function to process and modify the #EXTINF metadata
+def modify_extinf(extinf_line, index):
+    # Change the tvg-id to 's' + index and the group-title to 'general'
+    modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
+    #modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
+    return modified_line
+
 # Function to fetch the content of an .m3u file
 def fetch_m3u_content(url):
     response = requests.get(url)
@@ -37,7 +44,7 @@ def is_url_speed_acceptable(url):
         print(f"Skipping IPv6 URL: {url}")
         return False
     
-    test_duration=10
+    #test_duration=10
     try:
         # Make a GET request and fetch a small chunk of the file
         response = requests.get(url, stream=True, timeout=5)
@@ -79,6 +86,7 @@ def is_url_speed_acceptable(url):
 def process_m3u(content):
     lines = content.readlines()
     valid_lines = []
+    index=0
     
     i = 0
     while i < len(lines):
@@ -91,6 +99,8 @@ def process_m3u(content):
             if url_line.startswith('http'):
                if(is_url_speed_acceptable(url_line)):
                     # Add both the #EXTINF and the URL if speed is acceptable
+                    index+=1
+                    modified_extinf = modify_extinf(extinf_line, index)
                     valid_lines.append(extinf_line)
                     valid_lines.append(url_line)
                else:
