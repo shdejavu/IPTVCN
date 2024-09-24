@@ -18,8 +18,15 @@ def is_url_ipv6(url):
 # Function to process and modify the #EXTINF metadata
 def modify_extinf(extinf_line, index):
     # Change the tvg-id to 's' + index and the group-title to 'general'
-    modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
-    #modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
+    # modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
+    modified_line = re.sub(
+        r'tvg-id="([^"]+)"\s*tvg-name="([^"]+)"',
+        lambda m: (
+            # Check if tvg-name contains CCTV
+            'tvg-id="' + (re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) if "CCTV" in m.group(2) else m.group(2)) + '" ' +
+            'tvg-name="' + re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) + '"'  # Format tvg-name
+        ), extinf_line)
+    modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
     return modified_line
 
 # Function to fetch the content of an .m3u file
@@ -47,7 +54,7 @@ def is_url_speed_acceptable(url):
     #test_duration=10
     try:
         # Make a GET request and fetch a small chunk of the file
-        response = requests.get(url, stream=True, timeout=15)
+        response = requests.get(url, stream=True, timeout=5)
         
         # If the request is not successful, return False
         if response.status_code != 200:
@@ -100,8 +107,8 @@ def process_m3u(content):
                if(is_url_speed_acceptable(url_line)):
                     # Add both the #EXTINF and the URL if speed is acceptable
                     index+=1
-                    modified_extinf = modify_extinf(extinf_line, index)
-                    valid_lines.append(extinf_line)
+                    modified_line = modify_extinf(extinf_line, index)
+                    valid_lines.append(modified_line)
                     valid_lines.append(url_line)
                else:
                     print(f"failed stream: {url_line}")
