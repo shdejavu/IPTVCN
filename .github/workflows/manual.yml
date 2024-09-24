@@ -23,13 +23,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
 
+    - name: Run M3U processing script
+      run: |
+        python cm3u.py
+
     - name: Download and concatenate m3u files for iplive
       run: |
         curl https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u > live.m3u
-
-    - name: Run M3U processing script
-      run: |
-        python m3u.py
 
     - name: Commit changes
       run: |
